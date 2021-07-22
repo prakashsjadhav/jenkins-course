@@ -1,6 +1,5 @@
 pipelineJob('NodeJS Pipeline Job DSL Docker example') {
   definition {
-    cpscm { 
       scm {
         git('git://github.com/wardviaene/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
@@ -8,7 +7,6 @@ pipelineJob('NodeJS Pipeline Job DSL Docker example') {
             scriptPath('misc/Jenkinsfile')
         }
       }
-    }
   }
   triggers {
     scm('H/5 * * * *')
