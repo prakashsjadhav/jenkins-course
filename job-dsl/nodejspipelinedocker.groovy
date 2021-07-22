@@ -1,15 +1,14 @@
-pipelineJob('job-dsl-plugin') {
+pipelineJob('NodeJS Pipeline Job DSL Docker example') {
   definition {
     cpsScm {
       scm {
         git {
-          remote {
-            url('https://github.com/jenkinsci/job-dsl-plugin.git')
-          }
-          branch('*/master')
+	      remote {
+		    url('git://github.com/wardviaene/docker-demo.git')
+            scriptPath('misc/Jenkinsfile')
+		  }
         }
       }
-      lightweight()
-    }
+	}
   }
 }
