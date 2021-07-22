@@ -14,15 +14,4 @@ pipelineJob('NodeJS Pipeline Job DSL Docker example') {
   triggers {
     scm('H/5 * * * *')
   }
-  steps {
-    dockerBuildAndPublish {
-      repositoryName('prakashsjadhav2019/docker-nodejs-demo')
-      tag('${GIT_REVISION,length=9}')
-      registryCredentials('dockerhub')
-      forcePull(false)
-      forceTag(false)
-      createFingerprints(false)
-      skipDecorate()
-    }
-  }
 }
