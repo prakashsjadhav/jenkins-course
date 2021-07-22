@@ -1,4 +1,4 @@
-pipelineJob('NodeJS Pipeline Job DSL Docker example') {
+job('NodeJS Pipeline Job DSL Docker example') {
   definition {
       scm {
         git('git://github.com/wardviaene/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
