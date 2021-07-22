@@ -4,7 +4,7 @@ pipelineJob('NodeJS Pipeline Job DSL Docker example') {
       scm {
         git {
 	      remote {
-		    url('git://github.com/wardviaene/docker-demo.git')
+		    url('git@github.com:prakashsjadhav/docker-demo.git')
             scriptPath('misc/Jenkinsfile')
 		  }
         }
