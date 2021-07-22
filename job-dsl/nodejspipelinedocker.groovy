@@ -1,3 +1,4 @@
+- script: >
 pipelineJob('NodeJS Pipeline Job DSL Docker example') {
   definition {
     cpscm { 
